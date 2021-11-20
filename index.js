@@ -30,6 +30,13 @@ const bgChange = () => {
     });
 };
 
+const removeInterval = () => {
+    if (window.myInterval != undefined && window.myInterval != 'undefined') {
+        window.clearInterval(window.myInterval);
+    }
+};
+
+removeInterval();
 createGrid();
 bgChange();
 
@@ -49,11 +56,6 @@ const changeGrid = (p) => {
     console.log()
 }
 
-const removeInterval = () => {
-    if (window.myInterval != undefined && window.myInterval != 'undefined') {
-        window.clearInterval(window.myInterval);
-    }
-}
 
 
 function random_rgba() {
