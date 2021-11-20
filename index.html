@@ -10,21 +10,31 @@
 </head>
 
 <body>
-    <div>
+    <div class="content">
         <h2 class="title">
             Etch-A-Sketch
         </h2>
-        <div class="btn-container">
-            <button onclick="clearAll()">Change Grid Size</button>
-            <div>
-                <label for="color">Change Color: </label>
-                <input type="color" id="color">
+
+        <div class='player'>
+            <div class="btn-container">
+                <button class="btn" onclick="changeGrid(16)" type="submit">16X16</button>
+                <button class="btn" onclick="changeGrid(30)" type="submit">30X30</button>
+                <button class="btn" onclick="changeGrid(64)" type="submit">64X64</button>
+                <button class="btn" onclick="removeInterval()">Pick a Color: <input type="color" id="colorssss" onclick="removeInterval()"></button>
+                <button onclick="random_rgba()" class="btn">Random RGB</button>
+                <button onclick="rainbow()" class="btn"> Rainbow </button>
+            </div>
+
+            <div id='root'></div>
+
+            <div class="source-code">
+                <h2>
+                    Source Code:
+                </h2>
+                <a href="https://github.com/Aadim1/odin-etch" target="blank_"><img src="https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-512.png" alt=""></a>
             </div>
         </div>
-
-        <div id='root'>
-
-        </div>
+        <button class="btn btn-reset" onclick="clearAll()">Reset</button>
     </div>
 
     <script src="./index.js"></script>
